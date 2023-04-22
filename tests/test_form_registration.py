@@ -1,4 +1,3 @@
-from pages import registration_page
 from selene import browser
 
 from pages.registration_page import StudentRegistrationPage
