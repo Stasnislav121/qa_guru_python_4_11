@@ -1,7 +1,6 @@
 from selene import browser
-
-from pages.registration_page import StudentRegistrationPage
-from utils import attach
+from demoqa.pages.registration_page import StudentRegistrationPage
+from demoqa.utils import attach
 
 
 def test_registration_form_(browser_setup):

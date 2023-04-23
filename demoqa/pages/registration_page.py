@@ -2,11 +2,12 @@ import os
 
 from selene import browser, command, have
 
-import tests
+
+import demoqa
 
 
 def file_path(file):
-    return os.path.abspath(os.path.join(os.path.dirname(tests.__file__), f'img/{file}'))
+    return os.path.abspath(os.path.join(os.path.dirname(demoqa.__file__), f'tests/img/{file}'))
 
 class StudentRegistrationPage:
     def open(self):
