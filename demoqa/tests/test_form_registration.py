@@ -1,7 +1,6 @@
 import allure
-from selene import browser
 from demoqa.pages.registration_page import StudentRegistrationPage
-from demoqa.utils import attach
+
 
 
 @allure.title("Заполнение формы регистрации студенты")
@@ -40,6 +39,3 @@ def test_registration_form_(browser_setup):
             'Rome, Italy',
             'Uttar Pradesh Agra'
         )
-    attach.add_html(browser)
-    attach.add_screenshot(browser)
-    attach.add_logs(browser)

@@ -3,15 +3,14 @@ from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+from demoqa.utils import attach
+
 
 @pytest.fixture(scope='function')
 def browser_setup():
     browser.config.window_width = 1080
     browser.config.window_height = 1440
     browser.config.base_url = 'https://demoqa.com'
-    # browser.config.hold_browser_open = True
-
-
 
     options = Options()
     selenoid_capabilities = {
@@ -29,3 +28,7 @@ def browser_setup():
         options=options)
 
     browser.config.driver = driver
+
+    attach.add_html(browser)
+    attach.add_screenshot(browser)
+    attach.add_logs(browser)
