@@ -1,8 +1,5 @@
-from turtle import update
-
 import allure
 from allure_commons.types import AttachmentType
-from selene.support import webdriver
 
 
 # Скриншоты
